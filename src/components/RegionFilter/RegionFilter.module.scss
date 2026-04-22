@@ -1,0 +1,51 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-width: 180px;
+}
+
+.icon {
+  position: absolute;
+  left: 14px;
+  width: 16px;
+  height: 16px;
+  color: $text-muted;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.chevron {
+  position: absolute;
+  right: 12px;
+  width: 16px;
+  height: 16px;
+  color: $text-muted;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.select {
+  width: 100%;
+  padding: 12px 36px 12px 40px;
+  appearance: none;
+  background: $bg-secondary;
+  border: 1.5px solid $border;
+  border-radius: $radius-md;
+  color: $text-primary;
+  font-size: 0.9rem;
+  font-weight: 400;
+  outline: none;
+  cursor: pointer;
+  transition: border-color $transition, box-shadow $transition;
+
+  option {
+    background: $bg-secondary;
+    color: $text-primary;
+  }
+
+  &:focus {
+    border-color: $accent;
+    box-shadow: $shadow-glow;
+  }
+}

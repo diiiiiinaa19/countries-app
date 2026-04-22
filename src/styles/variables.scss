@@ -1,0 +1,35 @@
+// Colors
+$bg-primary: #0f1117;
+$bg-secondary: #1a1d27;
+$bg-card: #1e2132;
+$bg-card-hover: #252840;
+$border: #2e3250;
+$border-focus: #6c7aff;
+
+$text-primary: #f0f2ff;
+$text-secondary: #8b90b8;
+$text-muted: #555a7a;
+
+$accent: #6c7aff;
+$accent-light: #8b97ff;
+$accent-glow: rgba(108, 122, 255, 0.15);
+
+$gold: #f0c060;
+$gold-light: #f5d080;
+
+// Typography
+$font-display: 'Playfair Display', Georgia, serif;
+$font-body: 'DM Sans', system-ui, sans-serif;
+
+// Spacing
+$radius-sm: 8px;
+$radius-md: 14px;
+$radius-lg: 20px;
+
+// Transitions
+$transition: 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+$transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+// Shadows
+$shadow-card: 0 4px 24px rgba(0, 0, 0, 0.35);
+$shadow-glow: 0 0 0 3px $accent-glow;

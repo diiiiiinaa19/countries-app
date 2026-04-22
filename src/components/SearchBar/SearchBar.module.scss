@@ -1,0 +1,70 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  max-width: 420px;
+}
+
+.icon {
+  position: absolute;
+  left: 14px;
+  width: 18px;
+  height: 18px;
+  color: $text-muted;
+  pointer-events: none;
+  transition: color $transition;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 40px 12px 44px;
+  background: $bg-secondary;
+  border: 1.5px solid $border;
+  border-radius: $radius-md;
+  color: $text-primary;
+  font-size: 0.9rem;
+  font-weight: 400;
+  outline: none;
+  transition: border-color $transition, box-shadow $transition;
+
+  &::placeholder {
+    color: $text-muted;
+  }
+
+  &:focus {
+    border-color: $accent;
+    box-shadow: $shadow-glow;
+
+    + .icon {
+      color: $accent;
+    }
+  }
+
+  &:focus ~ .icon {
+    color: $accent;
+  }
+}
+
+.wrapper:focus-within .icon {
+  color: $accent;
+}
+
+.clear {
+  position: absolute;
+  right: 12px;
+  color: $text-muted;
+  font-size: 0.75rem;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background $transition, color $transition;
+
+  &:hover {
+    background: $border;
+    color: $text-primary;
+  }
+}

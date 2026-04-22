@@ -1,0 +1,134 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+// ── Header ────────────────────────────────────────────────
+.header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 32px 0 28px;
+  border-bottom: 1px solid $border;
+}
+
+.logo {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $accent-glow;
+  border: 1.5px solid rgba(108, 122, 255, 0.3);
+  border-radius: 12px;
+  color: $accent-light;
+  flex-shrink: 0;
+
+  svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+.headerText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.title {
+  font-family: $font-display;
+  font-size: 1.55rem;
+  font-weight: 600;
+  color: $text-primary;
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+
+.subtitle {
+  font-size: 0.78rem;
+  color: $text-muted;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+}
+
+// ── Main layout ───────────────────────────────────────────
+.main {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 28px;
+  flex: 1;
+  padding: 28px 0 40px;
+  align-items: start;
+
+  @media (max-width: 860px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+// ── Sidebar ───────────────────────────────────────────────
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: sticky;
+  top: 24px;
+  max-height: calc(100vh - 80px);
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.count {
+  font-size: 0.78rem;
+  color: $text-muted;
+  padding: 0 4px;
+  letter-spacing: 0.02em;
+}
+
+.countNum {
+  font-weight: 600;
+  color: $accent-light;
+}
+
+.listWrap {
+  overflow-y: auto;
+  flex: 1;
+  max-height: calc(100vh - 260px);
+  padding-right: 2px;
+
+  // Fade top/bottom edges
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 5%,
+    black 92%,
+    transparent 100%
+  );
+
+  scrollbar-width: thin;
+  scrollbar-color: $border transparent;
+}
+
+// ── Detail panel ──────────────────────────────────────────
+.detail {
+  background: $bg-secondary;
+  border: 1.5px solid $border;
+  border-radius: $radius-lg;
+  padding: 28px;
+  min-height: 400px;
+  position: sticky;
+  top: 24px;
+
+  @media (max-width: 860px) {
+    position: static;
+    order: -1;
+  }
+}
